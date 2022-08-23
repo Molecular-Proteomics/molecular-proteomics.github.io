@@ -1,5 +1,5 @@
 # Preface {.unnumbered}
 
-This is a Quarto book.
+This is an introduction to working with proteomics experiments and data. 
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+For more information visit <https://maggielab.net>.

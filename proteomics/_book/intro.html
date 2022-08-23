@@ -15,25 +15,6 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 
@@ -132,7 +113,14 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#why-proteomics" id="toc-why-proteomics" class="nav-link active" data-scroll-target="#why-proteomics"> <span class="header-section-number">1.1</span> Why proteomics?</a></li>
+  <li><a href="#experimental-basics" id="toc-experimental-basics" class="nav-link" data-scroll-target="#experimental-basics"> <span class="header-section-number">1.2</span> Experimental basics</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -153,15 +141,20 @@ div.csl-indent {
 
 </header>
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+<section id="why-proteomics" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="why-proteomics"><span class="header-section-number">1.1</span> Why proteomics?</h2>
+<p>The human genome encodes ~20,000 different proteins, which are mole- cules that carry out the majority of biological functions. The identity and func- tion of a protein is defined by its unique sequence of 20 naturally-occurring amino acids connected through peptide bonds. Some common proteins are keratin, collagen, and hemoglobin. Most human diseases involve changes in the composition or functions of proteins in one form or another. Proteomics is a powerful technique that allows the identification and quantification of virtual- ly all the protein species in a tissue, i.e., its proteome, on a large-scale, through which researchers can gain important insights into the molecular makeup and physiology of a biological sample. At the Center, our investiga- tors use proteomics to compare the expression, interactions, and turnover of proteins in heart disease models to understand disease mechanisms.</p>
+</section>
+<section id="experimental-basics" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="experimental-basics"><span class="header-section-number">1.2</span> Experimental basics</h2>
+<p>EXPERIMENTAL WORKFLOW</p>
+<p>experimental spectra How do you identify and quantify proteins from biological samples? The tradi- tional way was to use antibodies that recognize specific proteins, but this ap- proach suffers from limited throughput. To identify proteins on a large scale, proteomics scientists use mass spectrometry. A mass spectrometer is like a balance for very small things: it can measure the accurate molecular weight of protein molecules. Because mass spectrometers are not very good at analyzing entire proteins, protein samples are usually first digested into smaller fragments (peptides) prior to analysis. This is typically done with trypsin, a sequence-specific prote- ase that cleaves the protein sequence after every lysine (K) and arginine (R). The proteome is too complex for mass spectrometers to analyze all at the same time, so digested peptides are usually first resolved using liquid chro- matography, an analytical chemistry technique which separates the peptides into individual elution peaks over time, based on their chemical properties. Once the peptides enter the mass spectrometer, they are ionized, and their mass is recorded as the precursor mass in a mass spectrum (MS1 spec- trum). Many peptides could have the same masses, however, so sequences are only deduced when the peptides are fragmented and the individual frag- ment masses recorded again in a tandem mass spectrum (MS2 spectrum). A mass spectrometry experiment could take hours to days, during which time spectra are continuously acquired. The ion signal intensity of a particular mass range over time is summarized in a chromatogram.</p>
+<p>From the fragment masses on the MS2 spectrum, one can deduce the se- quence of the peptide that gave rise to the spectrum, and by extension the protein that gave rise to the peptide.</p>
+<p>Although spectra could be interpreted manually to find peptide sequences, modern mass spectrometers generate hundreds of thousands of spectra per day, which is infeasible to analyze by hand. A database search method and algorithm is therefore commonly used to automatically identify peptides from spectra. A sequence database contains predicted protein sequencs from ge- nomic sequences, which can be used to generate theoretical spectra that contain predicted fragment ion masses. An algorithm is then used to evaluate the cross correlation between the theoretical and the experimental spectrum, and the best matched theoretical spectra are ranked.</p>
+<p>An alternative to sequence database search is spectral library search. Em- pirically identified spectra from prior experiments are collected and deposited into a library, which can be used to directly identify peptides in subsequent experiments by matching new experimental spectra to the library spectra. Mass spectrometers can also be used to quantify peptides and proteins. Two common methods are quantification based on spectral counts (number of spectra from which the peptide was identified) and ion intensity (the area-un- der-curve of the peptide ion signal). Additional methods including isotope la- beling and targeted MS can also be used for accurate measurements.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-knuth84" class="csl-entry" role="doc-biblioentry">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
