@@ -5,6 +5,7 @@ book:
   title: "Working with Proteomics"
   author: "Maggie Lam, Edward Lau"
   date: "8/23/2022"
+  number-depth: 2
   chapters:
     - index.qmd
     - intro.qmd
